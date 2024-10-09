@@ -1,0 +1,359 @@
+
+
+
+
+
+
+
+
+
+
+
+OK... VAMOS USAR O SANDBOX STARTER...
+
+
+
+
+
+
+
+
+
+
+COMEÇAMOS COM O HTML LIMPO...
+
+
+TIPO ASSIm:
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body></body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRECISAMOS BAIXAR AS IMAGES USADAS PELO PROFESSOR...
+
+PEGAMOS AS IMAGES LÁ DO GITHUB...
+
+
+
+
+
+
+
+
+
+
+
+CERTO... PEGUEI TODAS AS IMAGES...
+
+
+
+
+
+
+--> SE VC ESTÁ PRODUZINDO UM PRODUCTION WEBSITE,
+    O PROFESSOR SUGERE COLOCAR OS SVG DIRETAMENTE NO ARQUIVO 
+
+    HTML,
+
+    PQ 
+
+
+    A PERFORMANCE PODE SER IMPACTADA SE VC TENTA CARREGAR A SVG 
+
+    POR MEIO DE UMA TAG DE <image> com o attribute de 'src'...
+
+
+
+
+
+
+--> MAS COMO O PROFESSOR QUER SER BEM ORGANIZADO, NESSE CASO 
+    ELE VAI USAR a image tag com as  svgs, com o 'src' (mesmo que seja pior,
+    em termos de performance)...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--> OK... A PRIMEIRA COISA QUE O PROFESSOR FAZ, NO CASO,
+
+    É DEFINIR 
+
+
+    SCREEN SIZES CUSTOMIZADOS, LÁ EM 'talwind.config.js'...
+
+
+
+
+    TIPO ASSIM:
+
+
+
+
+
+
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['*'],
+  theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+  },
+  plugins: [],
+};
+
+
+
+
+
+
+
+
+
+
+
+ESSES SERÃO NOSSOS SCREEN SIZES...
+
+
+
+
+
+
+
+
+
+
+
+--> DEPOIS DISSO, O PROFESSOR COLOCA COLORS, COM O EXTEND:
+
+
+
+
+
+
+
+
+
+
+
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['*'],
+  theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    extend: {
+      colors: {
+        strongCyan: 'hsl(171, 66%, 44%)',
+        lightBlue: 'hsl(233, 100%, 69%)',
+        darkGrayishBlue: 'hsl(210, 10%, 33%)',
+        grayishBlue: 'hsl(201, 11%, 66%)',
+      },
+    },
+  },
+  plugins: [],
+};
+
+
+
+
+
+
+
+
+
+
+
+ESSAS SERÃO TODAS AS COLORS DE NOSSO SITE...
+
+
+
+
+
+
+
+
+É CLARO QUE PODERÍAMOS USAR CLASSES TAILWIND COMUNS,
+
+MAS É MELHOR FAZER ISSO...
+
+
+
+
+
+
+
+
+
+
+
+--> TAMBÉM USAREMOS 1 FONTE ESPECIAL,
+
+POR ISSO ESCREVEMOS ASSIM:
+
+
+
+
+
+
+fontFamily: {
+    sans: ['Bai Jamjuree', 'sans-serif'],
+}
+
+
+
+
+
+
+
+EX:
+
+
+
+
+
+
+
+
+
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['*'],
+  theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    extend: {
+      colors: {
+        strongCyan: 'hsl(171, 66%, 44%)',
+        lightBlue: 'hsl(233, 100%, 69%)',
+        darkGrayishBlue: 'hsl(210, 10%, 33%)',
+        grayishBlue: 'hsl(201, 11%, 66%)',
+      },
+      fontFamily: {
+        sans: ['Bai Jamjuree', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+-> MAS PRECISAMOS IMPORTAR ESSA FONTE NO NOSSO HTML,
+
+
+COM GOOGLE FONTS...
+
+
+
+
+
+TIPO ASSIM:
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+
+
+
+
+
+
+
+
+AÍ RODAMOS NPM INSTALL, E AÍ NPM RUN DEV,
+
+PARA RODAR ESTES SCRIPTS:
+
+
+
+
+
+{
+  "name": "29-miniproject-1-email-subscribe-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
+    "vite": "^5.3.4"
+  }
+}

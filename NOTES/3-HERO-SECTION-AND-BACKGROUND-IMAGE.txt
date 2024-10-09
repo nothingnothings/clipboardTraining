@@ -1,0 +1,544 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+OK... AGORA VAMOS COMEÇAR COM NOSSO HTML..
+
+
+
+NÃO TEMOS NADA ATUALMENTE..
+
+
+
+
+
+
+
+
+
+
+
+
+-> O QUE O PROFESSOR GOSTA DE FAZER É CONSTRUIR OS SITES POR SECTIONS...
+
+
+
+
+TEREMOS ESTAS SECTIONS:
+
+
+
+
+
+
+1) HERO SECTION 
+
+
+
+2) SNIPPETS SECTION 
+
+
+3) FEATURES SECTION 
+
+
+4) ITEMS SECTION 
+
+
+5) FOOTER SECTION...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NÃO HÁ NENHUMA GRID MALUCA COM ESSE PROJECT, POR ISSO 
+
+É UM EXCELENTE FIRST PROJECT...
+
+
+
+
+
+
+
+
+
+
+--> COMEÇAMOS COM A HERO SECTION...
+
+
+
+
+
+
+
+
+
+    <section id="hero"></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A MAIOR PARTE DOS PROJECTS TERÁ 1 HAMBURGER MENU,
+
+QUE USARÁ JAVASCRIPT... MAS ESTE PROJECT NÃO TERÁ ISSO...
+
+
+
+
+
+
+
+O CONTAINER FICA TIPO ASSIM:
+
+
+
+
+
+
+
+    <section id="hero">
+      <div class="max-w-6xl mx-auto text-center mb-40 px-10 pt-16"></div>
+    </section>
+
+
+
+
+
+
+
+
+
+max-w-6xl --> SIGNIFICA QUE É UMA WIDTH MÁXIMA DE 72REM... --> É UM LAYOUT FLUÍDO,
+                                                                O QUE QUER DIZER QUE 
+                                                                ELE VAI SE ADAPTAR 
+
+                                                                A TODOS AS SCREEN SIZES 
+                                                                ATÉ 72REM, QUE 
+                                                                AÍ 
+                                                                SERÁ O MAXIMUM SCREEN SIZE...
+
+
+
+
+
+
+
+
+
+EX:
+
+
+
+
+
+
+
+
+
+
+    <section id="hero">
+      <div class="max-w-6xl mx-auto text-center mb-40 px-10 pt-16">
+        <img src="images/logo.svg" alt="" class="mx-auto my-16" />
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+DEBAIXO DA IMAGE, TEREMOS 1 H3...
+
+
+
+
+
+
+
+
+
+TEREMOS 1 MONTE DE H3 com as exatas mesmas classes,
+
+
+por isso vamos criar 1 directive, mais tarde, para definir 1 default styling,
+
+para não repetir tantas classes...
+
+
+
+
+
+
+
+
+VAI FICANDO TIPO ASSIM:
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="hero">
+      <div class="max-w-6xl mx-auto text-center mb-40 px-10 pt-16">
+        <img src="images/logo.svg" alt="" class="mx-auto my-16" />
+        <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">
+          A history of everything you copy
+        </h3>
+        <p class="max-w-3xl mx-auto mb-10 text-2xl text-darkGrayishBlue">
+          Clipboard allows you to track and organize everything you copy.
+          Instantly access your clipboard on all your devices.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+--> EMBAIXO DO TEXT, TEMOS 2 BUTTONS...
+
+--> ESSES 2 BUTTONS VÃO FICAR EM 1 FLEX ROW EM MEDIUM SCREENS,
+    E UMA FLEX COLUMN EM SMALLER SCREENS...
+
+
+
+
+
+
+
+
+EX:
+
+
+
+
+
+
+
+        <!-- BUTTON CONTAINER  -->
+        <div
+          class="flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-w-row"
+        ></div>
+
+
+
+
+
+
+
+
+
+
+EM  MEDIUM SCREENS, TAMBÉM QUEREMOS TIRAR O ESPAÇO ENTRE ITEMS NO EIXO y...
+
+
+
+
+EX:
+
+
+
+
+
+
+
+        <div
+          class="flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4"
+        >
+          <a
+            href="#"
+            class="p-4 px-8 rounded-full shadow-lg bg-strongCyan hover:opacity-80 duration-200"
+            >Download for iOS</a
+          >
+          <a
+            href="#"
+            class="p-4 px-8 rounded-full shadow-lg bg-lightBlue hover:opacity-80 duration-200"
+            >Download for Mac</a
+          >
+        </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+A ÚLTIMA COISA QUE QUEREMOS FAZER, PARA O HERO, É A BACKGROUND IMAGE...
+
+
+
+
+
+
+
+
+
+
+
+--> PRECISAREMOS USAR 1 POUCO DE CSS CUSTOM...
+
+
+
+
+
+
+
+
+
+
+
+--> SEMPRE QUE VC QUER USAR ALGUM CSS CUSTOMIZADO,
+    VC TERÁ 
+
+
+    DE USAR O ARQUIVO CSS EM QUE VC TEM AS CLASSES TAILWIND BÁSICAS...
+
+
+
+
+
+
+
+
+
+
+    ESTE ARQUIVO AQUI, BASICAMENTE:
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--> VAMOS ADICIONAR A IMAGE NO BODY,
+
+POR ISSO ESCREVEMOS ASSIM:
+
+
+
+
+
+
+body {
+    background-image: url('../images/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
+
+
+
+
+
+
+CERTO...
+
+
+
+
+
+
+
+
+
+MAS USAREMOS BACKGROUND IMAGES PARA MOBILE E DESKTOP... DEPENDENDO DE EM QUE 
+PLATAFORMA ESTAMOS...
+
+
+
+
+
+
+
+
+
+
+O PROFESSOR MENCIONA:
+
+
+''EXISTEM BACKGROUND CLASSES 
+ QUE PODEMOS USAR, NO TAILWIND... MAS NÃO 
+ EXISTE 1 CLASS EM QUE VC PODE DEFINIR 1 IMAGE, NO TAILWIND,
+ E É EXAMENTE POR ISSO QUE ESTAMOS DEFININDO A IMAGE DIRETAMENTE NO ARQUIVO 
+ STYLE.CSS''....
+
+
+
+
+
+
+
+
+
+
+
+--> O PROFESSOR ENTÃO ESCREVE 1 MEDIA QUERY, PARA QUE 
+
+
+
+QUANDO O DISPOSITIVO TIVER DE 0 A 576PX,
+
+
+FICAMOS COM 1 IMAGE DE 
+
+
+bg-header-mobile...
+
+
+
+
+TIPO ASSIM:
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ EX:
+
+
+
+
+
+
+
+
+
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url('../images/bg-header-desktop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url('../images/bg-header-mobile.png');
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+OK... AGORA ESTAMOS COM 1 BOM COMEÇO... NO PRÓXIMO VÍDEO, VEREMOS 
+
+A SECTION DE 'SNIPPETS'...

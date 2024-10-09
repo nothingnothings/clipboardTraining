@@ -1,0 +1,377 @@
+
+
+
+
+
+
+
+
+
+
+CERTO... TERMINAMOS A SECTION DE 'HERO'...
+
+
+
+
+
+
+
+--> AGORA VAMOS CRIAR OUTRA SECTION,
+
+
+PARA OS SNIPPETS...
+
+
+
+
+
+
+
+
+
+
+
+
+--> FAZEMOS TIPO ASSIM:
+
+
+
+
+
+
+
+    <!-- SNIPPETS SECTION -->
+    <section id="snippets">
+      <div class="max-w-6xl mx-auto text-center my-20 px-10">
+        <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">
+          Keep track of your snippets
+        </h3>
+        <p
+          class="max-w-3xl mx-auto mb-24 text-xl leading-9 text-center text-grayishBlue"
+        >
+          Clipboard instantly stores any item you copy in the cloud, meaning you
+          can access your snippets immediately on all your devices. Our Mac and
+          iOS apps will help you organize everything.
+        </p>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AQUI TEMOS 1 BOA OPORTUNIDADE PARA USAR DIRECTIVES,
+
+PQ TEMOS 2 CLASSES QUE ESTÃO REPETINDO....
+
+
+
+
+
+
+
+
+
+
+É A PARTE DE 
+
+
+'max-w-6xl mx-auto text-center'...
+
+
+
+
+
+
+
+
+
+--> PODEMOS CRIAR 1 CUSTOM CLASS,
+1 DIRECTIVE, PARA ISSO....
+
+
+
+
+
+
+
+
+
+--> TODOS OS h3 TERÃO AS MESMAS CLASSES, TAMBÉM... 
+
+
+
+
+
+
+
+
+
+--> É POR ISSO QUE USAREMOS A DIRECTIVE DE '@layer base' 
+
+
+
+para 
+
+
+
+adicionar uma class custom..
+
+
+
+
+
+
+ 
+
+
+
+
+
+criaremos uma class de '.section-container',
+
+tipo assim:
+
+
+
+
+
+
+
+
+
+/* CUSTOM CLASSES WITH TAILWIND DIRECTIVES */
+.section-container {
+  @apply max-w-6xl mx-auto text-center;
+}
+
+
+
+
+
+
+
+
+
+
+
+COM ISSO, PODEMOS SUBSTITUIR OS TRECHOS DE CLASSES, NO HTML,
+
+
+QUE POSSUEM ESSAS EXATAS CLASSES,
+
+POR apenas 'section-container'...
+
+
+tipo assim:
+
+
+
+
+
+      <div class="section-container mb-40 px-10 pt-16">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DEPOIS DISSO, O PROFESSOR 
+
+
+
+USA A DIRECTIVE DE '@layer base' para 
+
+
+SUBSTITUIR O STYLING DE TODAS AS TAGS h3 
+por um 
+
+styling custom, definido por nós, com as classes tailwind:
+
+
+
+
+
+
+/* REPLACE THE STYLING OF ALL H3 ELEMENTS WITH THIS ONE: */
+@layer base {
+  h3 {
+    @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+  }
+}
+
+
+
+
+
+
+
+CERTO...
+
+
+
+
+
+
+
+
+
+
+ISSO SERVE PARA DEIXAR NOSSO HTML MAIS LIMPO,
+
+MESMO COM CLASSES TAILWIND... É PARA ACABAR COM AS RECLAMAÇÕES...
+
+
+
+
+
+
+
+
+
+
+
+
+AGORA, QUANDO ADICIONARMOS MAIS CLASSES, PODEMOS 
+
+SIMPLESMENTE USAR A CLASS DE 'section-container', que já criamos...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--> FAZEMOS A MESMA COISA PARA OS CONTAINERS DOS BUTTONS, TIPO ASSIM:
+
+
+
+
+.button-container {
+  @apply flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="hero">
+      <div class="section-container mb-40 px-10 pt-16">
+        <img src="images/logo.svg" alt="" class="mx-auto my-16" />
+        <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">
+          A history of everything you copy
+        </h3>
+        <p class="max-w-3xl mx-auto mb-10 text-2xl text-darkGrayishBlue">
+          Clipboard allows you to track and organize everything you copy.
+          Instantly access your clipboard on all your devices.
+        </p>
+        <!-- BUTTON CONTAINER  -->
+        <div
+          class="button-container"
+        >
+          <a
+            href="#"
+            class="p-4 px-8 rounded-full shadow-lg bg-strongCyan hover:opacity-80 duration-200"
+            >Download for iOS</a
+          >
+          <a
+            href="#"
+            class="p-4 px-8 rounded-full shadow-lg bg-lightBlue hover:opacity-80 duration-200"
+            >Download for Mac</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- SNIPPETS SECTION -->
+    <section id="snippets">
+      <div class="section-container my-20 px-10">
+        <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">
+          Keep track of your snippets
+        </h3>
+        <p
+          class="max-w-3xl mx-auto mb-24 text-xl leading-9 text-center text-grayishBlue"
+        >
+          Clipboard instantly stores any item you copy in the cloud, meaning you
+          can access your snippets immediately on all your devices. Our Mac and
+          iOS apps will help you organize everything.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+CERTO...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NAS PRÓXIMAS AULAS, CONTINUAREMOS COM ESSE WEBSITE...
