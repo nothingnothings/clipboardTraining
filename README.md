@@ -1,5 +1,8 @@
 # ClipboardTraining
 
+[![en](https://img.shields.io/badge/lang-en-red.svg?style=flat-square)](https://github.com/nothingnothings/clipboardTraining)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg?style=flat-square)](https://github.com/nothingnothings/clipboardTraining/blob/master/README.pt-br.md)
+
 This README provides an overview of the `index.html` file for the ClipboardTraining project, showcasing the structure and Tailwind CSS classes utilized to create an engaging user experience.
 
 ![screenshot](screenshot.png)
